@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  /* background-color: rgb(203, 222, 236); */
+  background-color: rgb(238, 239, 243);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* border: 5px solid green; */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.appContainer {
+  /* border: 5px solid black; */
+  height: 100vh;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: relative;
+}
+
+.mainDiv {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-direction: column;
+  padding-top: 100px;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  width: 100%;
+  /* border: 5px solid crimson; */
+}
+
+.mainChildrenWrapper {
+  z-index: 2;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  /* border: 5px solid green; */
+}
+
+a {
+  color: inherit;
+  /* text-decoration: none; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.textAlignLeft {
+  text-align: left;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.center {
+  margin: auto;
+}
+
+.extend {
+  width: 100vw;
+}
+
+.centerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.pagesWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  flex-grow: 1;
+  width: 100%;
+  padding-bottom: 200px;
+  /* border: 5px solid blue; */
+}
+
+.pageWrapper {
+  max-width: 80%;
+  /* background-color: rgb(255, 255, 255); */
+  /* box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.2); */
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
+@media screen and (max-width: 1200px) {
+  .pageWrapper {
+    max-width: 90%;
+    /* border: 5px solid green; */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pageWrapper {
+    max-width: 95%;
+    /* border: 5px solid green; */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pageWrapper {
+    max-width: 100%;
+    padding: 0px;
+    /* border: 5px solid green; */
+  }
+}
+
+.bg {
+  box-shadow: 0 0 20px 0 rgba(128, 128, 128, 0.3);
+  background-color: whitesmoke;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateX(-5px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: unset;
+  transition: opacity 300ms, transform 300ms;
+}
+.page-exit {
+  opacity: 1;
+  transform: unset;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(5px);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Custom Scrollbar */
+/* width */
+.mainDiv::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.mainDiv::-webkit-scrollbar-track {
+  background: rgb(60, 117, 150);
+}
+
+/* Handle */
+.mainDiv::-webkit-scrollbar-thumb {
+  background: rgb(132, 169, 192);
+}
+
+/* Handle on hover */
+.mainDiv::-webkit-scrollbar-thumb:hover {
+  background: rgb(49, 95, 122);
+}
+
+.transition-group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  /* border: 5px solid red; */
+  /* display: none; */
+}
+
+/* .gradientShapeTransition-enter {
+  opacity: 0;
+  transform: translateX(-5px);
+}
+.gradientShapeTransition-enter-active {
+  opacity: 1;
+  transform: unset;
+  transition: opacity 300ms, transform 300ms;
+}
+.gradientShapeTransition-exit {
+  opacity: 1;
+  transform: unset;
+}
+
+.gradientShapeTransition-exit-active {
+  opacity: 0;
+  transform: translateX(5px);
+  transition: opacity 200ms, transform 200ms;
+} */

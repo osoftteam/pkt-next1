@@ -1,0 +1,15 @@
+.emailWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: darkslategrey;
+  font-family: Montserrat;
+  font-size: 18px;
+}
+
+.pageWrapper > div {
+  max-width: 600px;
+  /* border: 2px solid red; */
+}

@@ -1,0 +1,215 @@
+.wrapper {
+  background: linear-gradient(rgba(187, 187, 236, 0.99), rgba(108, 191, 206, 0.9));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-direction: column;
+  box-shadow: -10px 5px 20px 0 rgba(49, 49, 49, 0.3);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 10px;
+  /* border: 2px solid red; */
+}
+
+.imgWrapper {
+  display: flex;
+  /* align-items: center; */
+  align-items: flex-start;
+  justify-content: center;
+  height: 90%;
+  width: fit-content;
+  position: relative;
+  /* border: 2px solid blue; */
+
+  /*  picture,  picture img { */
+  img {
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    filter: drop-shadow(-10px 5px 20px rgba(49, 49, 49, 0.4));
+    z-index: 1;
+    /* border: 2px solid red; */
+  }
+}
+
+.pointerCanvas {
+  position: absolute;
+  top: 10px;
+  /* border: 2px solid red; */
+  width: 100%;
+  height: calc(90% - 10px);
+  z-index: 4;
+  transition: 1.5s;
+}
+
+.pointerWrapper {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100px;
+  height: 100px;
+  transition-duration: 1.5s, 0.5s;
+  transition-delay: 0s, 0.5s;
+  transition-property: all, opacity;
+  transform: translateX(-150%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  /* border: 3px solid cyan; */
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.pointer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  border: 2px solid white;
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.brighter {
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: red;
+    opacity: 0;
+    transition: 1s opacity;
+  }
+
+  &.showCoordinates {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    width: 100%;
+    height: 2px;
+  }
+
+  &::after {
+    height: 100%;
+    width: 3px;
+  }
+
+  /* xs = extra small, s = small, m = mediumm, l = large */
+  &.m {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.s {
+    width: 50px;
+    height: 50px;
+  }
+  &.xs {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.verbalInstructionWrapper {
+  font-size: 19px;
+  padding: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  p {
+    color: rgb(20, 42, 66);
+  }
+}
+
+.coordinatesDisplay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.9), rgba(137, 181, 207, 0.9));
+  border: 1px solid grey;
+  box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  transition: 1s opacity;
+  opacity: 0;
+  z-index: 3;
+  /* border: 3px solid red; */
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.instructionalHeader {
+  color: darkslategrey;
+  font-family: Quicksand;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  background: linear-gradient(125deg, #ffe9d380, rgba(175, 183, 255, 0.99) 120%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.1s;
+  user-select: none;
+  max-width: 80%;
+  text-align: center;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.99);
+  }
+
+  &:not(.nothingHere):active {
+    transform: translateY(2px) scale(0.98);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .instructionalHeader {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .instructionalHeader {
+    font-size: 20px;
+  }
+}

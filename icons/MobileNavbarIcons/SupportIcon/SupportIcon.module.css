@@ -1,0 +1,48 @@
+.supportIconSVG {
+  width: 50px;
+  height: 50px;
+  margin-top: 12px;
+  /* border: 2px solid red; */
+}
+.supportIconSVG.active {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.supportIconSVG * {
+  transition: .05s;
+}
+
+.supportIconSVG.active * {
+  stroke: white;
+}
+
+.supportIconSVG.active .st1,
+.supportIconSVG.active .st3 {
+  fill: white;
+}
+
+.st0 {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+}
+.st1 {
+  fill: rgba(0, 0, 0, 0.2);
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 10;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st2 {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+.st3 {
+  stroke: rgba(0, 0, 0, 0.2);
+  fill: rgba(0, 0, 0, 0.2);
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}

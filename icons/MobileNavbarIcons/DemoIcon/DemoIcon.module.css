@@ -1,0 +1,12 @@
+.demoIconSVG {
+  width: 50px;
+  height: 50px;
+  margin-top: 12px;
+  transition: .05s;
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.demoIconSVG.active {
+  filter: drop-shadow(0 0 5px white);
+  fill: white;
+}

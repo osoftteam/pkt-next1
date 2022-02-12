@@ -1,0 +1,38 @@
+.containerWrapper {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+  transition: 0.5s;
+  transform: rotate(-45deg) scale(0.9);
+  opacity: 0;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+  /* border: 2px solid black; */
+
+  &.show {
+    transform: unset;
+    opacity: 1;
+  }
+
+  img {
+    z-index: 2;
+  }
+}
+
+.container {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 5px solid blue; */
+
+  > * {
+    /* transform: scale(0.8) !important; */
+  }
+}
