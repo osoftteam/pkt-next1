@@ -20,7 +20,7 @@ export default function Navbar(props) {
     { name: "Home", link: "/", key: uuidv4() },
     { name: "Download", link: "/download", key: uuidv4() },
     { name: "Support", link: "/support", key: uuidv4() },
-    { name: "Demo", link: "/demo", key: uuidv4() },
+    { name: "Screenshots & Tutorials", link: "/demo", key: uuidv4() },
   ]);
 
   return (
